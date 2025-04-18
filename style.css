@@ -123,6 +123,10 @@ button {
 	margin: 30px;
 }
 
+button:hover {
+	transform: scale(1.1);
+}
+
 /* SECOND SECTION  */
 
 #flexbox {
@@ -163,16 +167,37 @@ button {
 
 /* PORTFOLIO SECTION */
 
+/* ======Old Code Here======= */
+
+/* .grid {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 100px);
+}
+
+.item2 {
+	background-color: var(--secondary-color);
+	grid-column: 2/4;
+	grid-row: 1/3;
+} */
+
+/* ===========ADDED DESIGN STARTS HERE============= */
 .grid {
 	display: grid;
-	grid-template-columns: auto auto auto;
-	/* grid-template-rows: auto auto; */
-	grid-column-gap: 5px;
-	grid-row-gap: 5px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-gap: 5px;
 	padding-left: 40px;
 	overflow: hidden;
 	transition: transform 0.3s ease-in-out;
 }
+
+.item3 {
+	grid-column: 2;
+	grid-row: 1 / span 2;
+}
+/* ===========ADDED DESIGN ENDS HERE=============== */
 
 .item:hover {
 	transform: scale(1.1);
@@ -200,3 +225,6 @@ footer {
 /* media queries */
 @media (max-width: 500px) {
 }
+
+/* Unfortunanetly i idnt start the media query
+ */
